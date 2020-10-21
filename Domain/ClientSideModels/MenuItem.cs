@@ -4,9 +4,10 @@ namespace Domain.ClientSideModels
 {
     public class MenuItem
     {
-        public bool isActive {get; set;}
-        public string iconColor { get; set; }
-        public string label { get; set; }
-        public Guid referenceId { get; set; }
+        public bool IsActive { get; set; }
+        public string IconColor { get; set; }
+        public string Label { get; set; }
+        public Guid ReferenceId { get; set; }
+        public string DragCss { get; set; }
     }
 }

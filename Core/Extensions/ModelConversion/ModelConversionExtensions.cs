@@ -24,14 +24,24 @@ namespace Core.Extensions.ModelConversion
             return command;
         }
 
+        public static CreateTaskCommand ToCreateTaskCommand(this TaskVm model)
+        {
+            var command = new CreateTaskCommand()
+            {
+                Subject = model.Subject,
+                AssignedToId = model.AssignedToId
+            };
+            return command;
+        }
+
         public static MenuItem[] ToMenuItems(this IEnumerable<MemberVm> models)
         {
             return models.Select(m => new MenuItem()
             {
-                iconColor = m.Avatar,
-                isActive = false,
-                label = $"{m.LastName}, {m.FirstName}",
-                referenceId = m.Id
+                IconColor = m.Avatar,
+                IsActive = false,
+                Label = $"{m.LastName}, {m.FirstName}",
+                ReferenceId = m.Id
             }).ToArray();
         }
 

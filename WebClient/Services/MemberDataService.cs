@@ -90,10 +90,10 @@ namespace WebClient.Services
                     MembersChanged?.Invoke(this, null);
                     return;
                 }
-                UpdateMemberFailed?.Invoke(this, "The creation was successful, but we can no longer get an updated list of members from the server.");
+                CreateMemberFailed?.Invoke(this, "The creation was successful, but we can no longer get an updated list of members from the server.");
             }
 
-            UpdateMemberFailed?.Invoke(this, "Unable to create record.");
+            CreateMemberFailed?.Invoke(this, "Unable to create record.");
         }
 
         public void SelectMember(Guid id)

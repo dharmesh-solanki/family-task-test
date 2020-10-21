@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 
 <head>
@@ -29,6 +29,18 @@
         <a class="dismiss">🗙</a>
     </div>
     <script src="_framework/blazor.webassembly.js"></script>
+    <script type="text/javascript">
+        function DragEnterIndexPage(div) {
+            // console.log("drag enter: " + text);
+            $("div.dropzone").removeClass("drag-active");
+            $(div).addClass("drag-active");
+        }
+
+        function DragLeaveIndexPage() {
+            $("div.dropzone").removeClass("drag-active");
+            //console.log("drag leave: " + text);
+        }
+    </script>
 </body>
 
 </html>

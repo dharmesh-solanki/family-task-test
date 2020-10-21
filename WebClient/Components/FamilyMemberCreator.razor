@@ -52,7 +52,7 @@
 </style>
 
 <div class="create-wrapper col-12">
-    <div class="col-12 header pb-5 pb-sm-3"> Add Family Member </div>
+    <div class="col-12 header pb-5 pb-sm-3">@(member.Id == Guid.Empty ? "Add Family Member" : "Update Family Member") </div>
     <div class="row m-0 form">
         <div class="row m-0 col-12 p-0">
             <Field class="col-6 custom-input">
@@ -80,13 +80,13 @@
             <Field class="col-12">
                 <FieldLabel>Select Avtar</FieldLabel>
                 <div class="row m-0 col-12 p-0">
-                    <div class="col-9 p-0">
+                    <div class="col-8 p-0">
                         @foreach (var item in avatars)
                         {
                             <div class="avtar" @onclick="@(e => OnAvatarSelect(item))" style="background-color: @item;"></div>
                         }
                     </div>
-                    <div class="col-3 p-0 text-right">
+                    <div class="col-4 p-0 text-right">
                         @if (member.Id == Guid.Empty)
                         {
                             <Button class="add-btn px-3" @onclick="@OnAddClick">Add Member</Button>

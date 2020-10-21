@@ -3,5 +3,7 @@
   <PropertyGroup>
     <StartupScript>(Blank)</StartupScript>
     <StartAction>StartNone</StartAction>
+    <TargetConnectionString>Data Source=(localdb)\LocalDB;Initial Catalog=family-task-db;Integrated Security=True;Persist Security Info=False;Pooling=False;MultipleActiveResultSets=False;Connect Timeout=60;Encrypt=False;TrustServerCertificate=False</TargetConnectionString>
+    <TargetDatabase>family-task-db</TargetDatabase>
   </PropertyGroup>
 </Project>
